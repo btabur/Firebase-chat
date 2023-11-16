@@ -4,7 +4,7 @@ import {auth, provider} from './../firebase/config'
 
 const AuthPage = ({setIsAuth}) => {
 
-
+        //google ile giriş
     const handleLogin =()=> {
         signInWithPopup(auth,provider)
         .then((res)=> {

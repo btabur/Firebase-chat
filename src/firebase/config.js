@@ -5,6 +5,7 @@ import { initializeApp } from "firebase/app";
 
 import {getAuth, GoogleAuthProvider } from 'firebase/auth'
 // Your web app's Firebase configuration
+import {getFirestore} from 'firebase/firestore'
 const firebaseConfig = {
   apiKey: "AIzaSyAOZlgG1J4E4hYOixyI1Y3E8jJmqwPtgUQ",
   authDomain: "react-project-chat-1d005.firebaseapp.com",
@@ -16,7 +17,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
+//auth referansını alma
 export const auth =getAuth(app);
-
+//sap,ğlayıcının kurulumu yapma
 export const provider = new GoogleAuthProvider()
+
+//veritabanı referansının alma
+
+export const db = getFirestore(app);
